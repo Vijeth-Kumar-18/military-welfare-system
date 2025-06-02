@@ -29,10 +29,10 @@ const EmergencyPage = () => {
 
   return (
     <div className="container mt-5">
-      <h2 className="mb-4" style={{ color: '#fc8019' }}>Emergency Response Center</h2>
+      <h2 className="mb-4" style={{ color: 'black' }}>Emergency Response Center</h2>
 
       {status && (
-        <div className="alert" style={{ backgroundColor: '#fc8019', color: 'white' }}>
+        <div className="alert" style={{ backgroundColor: 'blue', color: 'white' }}>
           {status}
         </div>
       )}
