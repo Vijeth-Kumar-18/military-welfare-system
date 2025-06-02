@@ -9,28 +9,26 @@ const AboutPage = () => {
       {/* Medium-thin Navbar - Consistent with Contact Page */}
       <nav className="navbar navbar-expand-lg" style={{
         backgroundColor: "white",
-        boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
+        boxShadow: "0 2px 10px rgb(231, 229, 229)",
         height: "60px",
         padding: "0.5rem 1rem"
       }}>
-        
+        {/* You can add navbar content here if needed */}
       </nav>
 
       {/* Hero Section */}
       <div className="py-5" style={{
-        background: "linear-gradient(rgba(19, 42, 169, 0.7), rgba(44, 31, 190, 0.7)), url('https://images.unsplash.com/photo-1580130732478-4d03694a7d1e')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        color: "white"
+        backgroundColor: "white",
+        color: "#282c3f"
       }}>
         <div className="container py-5">
           <div className="row">
             <div className="col-lg-8 mx-auto text-center">
-              <h1 className="display-4 fw-bold mb-4">
-                <i className="fas fa-medal me-3" style={{ color: "blue" }}></i>
+              <h1 className="display-4 fw-bold mb-4" style={{ color: "#fc8019" }}>
+                <i className="fas fa-medal me-3"></i>
                 Ministry of Defence Initiative
               </h1>
-              <p className="lead fw-bold">
+              <p className="lead fw-bold" style={{ color: "#686b78" }}>
                 Serving Those Who Serve the Nation
               </p>
             </div>
