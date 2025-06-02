@@ -2,4 +2,20 @@
     font-weight: bold;
     font-size: 1.5rem;
   }
+  .nav-link {
+    color: white !important;
+    margin-right: 15px;
+    transition: 0.2s;
+  }
+  
+  .nav-link:hover {
+    color: #fc8019 !important;
+  }
+  
+  .active-link {
+    color: #fc8019 !important;
+    font-weight: bold;
+    border-bottom: 2px solid #fc8019;
+  }
+  
   
