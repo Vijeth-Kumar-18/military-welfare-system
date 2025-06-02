@@ -1,10 +1,12 @@
 import React from 'react';
 
-const HomePage = () => (
-  <div style={{ padding: '20px' }}>
-    <h1>Welcome to the Military Welfare Portal</h1>
-    <p>Use the menu to navigate through the platform.</p>
-  </div>
-);
+const HomePage = () => {
+  return (
+    <div className="container mt-4">
+      <h1>Welcome to the Military Welfare Platform</h1>
+      <p>This platform streamlines welfare management and community connectivity.</p>
+    </div>
+  );
+};
 
 export default HomePage;
