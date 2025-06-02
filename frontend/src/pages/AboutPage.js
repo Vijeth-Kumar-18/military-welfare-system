@@ -154,8 +154,8 @@ const AboutPage = () => {
       <footer className="py-4 text-center" style={{ backgroundColor: "white", borderTop: "1px solid #e9e9eb" }}>
         <p className="fw-bold small mb-0" style={{ color: "#686b78" }}>
           © Fouji Bandhan, 2025. All Rights Reserved | 
-          <a href="#" className="text-decoration-none ms-2" style={{ color: "#fc8019" }}>Privacy Policy</a> | 
-          <a href="#" className="text-decoration-none ms-2" style={{ color: "#fc8019" }}>Terms of Service</a>
+          <a href="/Privacy" className="text-decoration-none ms-2" style={{ color: "#fc8019" }}>Privacy Policy</a> | 
+          <a href="/Terms" className="text-decoration-none ms-2" style={{ color: "#fc8019" }}>Terms of Service</a>
         </p>
       </footer>
     </div>

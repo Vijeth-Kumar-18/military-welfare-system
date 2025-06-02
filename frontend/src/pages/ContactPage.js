@@ -138,7 +138,7 @@ const ContactPage = () => {
                   <div className="mb-4 form-check">
                     <input type="checkbox" className="form-check-input" id="termsCheck" checked={agreeToTerms} onChange={handleCheckboxChange} />
                     <label className="form-check-label fw-bold text-muted" htmlFor="termsCheck">
-                      By contacting us you agree to our <a href="#" className="text-decoration-none" style={{ color: "#fc8019" }}>Terms and Conditions</a> and <a href="#" className="text-decoration-none" style={{ color: "#fc8019" }}>Privacy Policy</a>
+                      By contacting us you agree to our <a href="/Terms" className="text-decoration-none" style={{ color: "#fc8019" }}>Terms and Conditions</a> and <a href="/Privacy" className="text-decoration-none" style={{ color: "#fc8019" }}>Privacy Policy</a>
                     </label>
                   </div>
 

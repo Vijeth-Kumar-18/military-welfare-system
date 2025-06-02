@@ -52,8 +52,8 @@ const TermsOfServicePage = () => {
           <p>
             For questions or concerns about these terms, please contact:
             <br />
-            <strong>Email:</strong> support@armedforces.in<br />
-            <strong>Phone:</strong> +91 12345 67890
+            <strong>Email:</strong> support@foujibandhan.in<br />
+            <strong>Phone:</strong> 1800-ARMY-HELP (1800-2769-4357)
           </p>
         </div>
       </div>
