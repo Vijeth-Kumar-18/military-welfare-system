@@ -1,0 +1,28 @@
+.homepage-container {
+    min-height: 100vh;
+    background-color: white;
+  }
+  
+  .hero-section {
+    height: 300px;
+    background: linear-gradient(to right, #fc8019, #fc8019);
+    color: white;
+    padding: 40px 20px;
+    border-radius: 0;
+  }
+  
+  .category-card {
+    border: 1px solid #dee2e6;
+    transition: transform 0.2s ease;
+    border-radius: 12px;
+  }
+  
+  .category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon {
+    font-size: 40px;
+  }
+  
