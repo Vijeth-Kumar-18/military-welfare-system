@@ -7,11 +7,12 @@ import SchemesPage from "./pages/SchemesPage";
 import FamilyGrievancePage from './pages/FamilyGrievancePage';
 import EmergencyPage from "./pages/EmergencyPage";
 import GrievancePage from "./pages/GrievancePage";
-import HelpSupportPage from "./pages/HelpSupportPage";
+
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import SucessPage from "./pages/SucessPage";
 
 function App() {
   return (
@@ -23,11 +24,13 @@ function App() {
         <Route path="/family/grievance" element={<FamilyGrievancePage />} /> {/* ✅ Step 2: Add the route */}
         <Route path="/emergency" element={<EmergencyPage />} />
         <Route path="/grievance" element={<GrievancePage />} />
-        <Route path="/help-support" element={<HelpSupportPage />} />
+       
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/sucess" element={<SucessPage />} />
+
       </Routes>
     </Router>
   );
