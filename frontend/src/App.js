@@ -12,6 +12,8 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import SucessPage from "./pages/SucessPage";
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsOfServicePage from './pages/TermsOfServicePage';
+import SendMessagePage from './pages/SendMessagePage';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/sucess" element={<SucessPage />} />
         <Route path="/privacy" element={<PrivacyPolicyPage />} />
+        <Route path="/terms" element={<TermsOfServicePage />} />
+        <Route path="/send-message" element={<SendMessagePage />} />
 
       </Routes>
     </Router>

@@ -151,7 +151,10 @@ const ContactPage = () => {
                         borderRadius: "8px",
                         padding: "12px",
                         cursor: agreeToTerms ? "pointer" : "not-allowed"
-                      }}>
+                      }}
+                       type="submit"
+  className="btn btn-warning"
+  onClick={() => window.location.href = '/send-message'}>
                       SEND MESSAGE <i className="fas fa-arrow-right ms-2"></i>
                     </button>
                   </div>
@@ -164,8 +167,8 @@ const ContactPage = () => {
         <footer className="mt-5 pt-4 text-center">
           <p className="fw-bold small" style={{ color: "#686b78" }}>
             © Fouji Bandhan, 2025. All Rights Reserved |
-            <a href="#" className="text-decoration-none ms-2" style={{ color: "#fc8019" }}>Privacy Policy</a> |
-            <a href="#" className="text-decoration-none ms-2" style={{ color: "#fc8019" }}>Terms of Service</a>
+            <a href="/Privacy" className="text-decoration-none ms-2" style={{ color: "#fc8019" }}>Privacy Policy</a> |
+            <a href="/Terms" className="text-decoration-none ms-2" style={{ color: "#fc8019" }}>Terms of Service</a>
           </p>
         </footer>
       </div>
