@@ -29,12 +29,20 @@ const EmergencyPage = () => {
 
   return (
     <div className="container mt-5">
-      <h2 className="text-danger mb-4">Emergency Response Center</h2>
+      <h2 className="mb-4" style={{ color: '#fc8019' }}>Emergency Response Center</h2>
 
-      {status && <div className="alert alert-success">{status}</div>}
+      {status && (
+        <div className="alert" style={{ backgroundColor: '#fc8019', color: 'white' }}>
+          {status}
+        </div>
+      )}
 
-      <button className="btn btn-danger mb-4" onClick={handleSOS}>
-        🔴 Send SOS Alert
+      <button 
+        className="btn mb-4" 
+        onClick={handleSOS}
+        style={{ backgroundColor: '#fc8019', color: 'white' }}
+      >
+         Send SOS Alert
       </button>
 
       <form onSubmit={handleSubmit}>
@@ -89,7 +97,11 @@ const EmergencyPage = () => {
           ></textarea>
         </div>
 
-        <button type="submit" className="btn btn-primary">
+        <button 
+          type="submit" 
+          className="btn"
+          style={{ backgroundColor: '#fc8019', color: 'white' }}
+        >
           Submit Emergency Alert
         </button>
       </form>
