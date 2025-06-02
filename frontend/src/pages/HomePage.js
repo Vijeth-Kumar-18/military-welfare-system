@@ -6,6 +6,10 @@ import "../styles/Home.css";
 function HomePage() {
   const navigate = useNavigate();
 
+<<<<<<< HEAD
+=======
+  // Carousel data
+>>>>>>> d02900ee249227b9c88aceb8c9fe967b46a31541
   const carouselItems = [
     {
       image: "https://images.pexels.com/photos/3476860/pexels-photo-3476860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -27,6 +31,7 @@ function HomePage() {
     }
   ];
 
+<<<<<<< HEAD
   const categories = [
     { title: "Medical", icon: "🩺" },
     { title: "Education", icon: "🎓" },
@@ -56,7 +61,31 @@ function HomePage() {
       </Carousel>
 
       {/* Search & Categories Section */}
+=======
+  return (
+     <div>
+       {/* Carousel Section */}
+       <Carousel interval={1500} pause={false}>
+         {carouselItems.map((scheme, idx) => (
+           <Carousel.Item key={idx}>
+             <img
+               className="d-block w-100"
+               src={scheme.image}
+               alt={scheme.title}
+               style={{ height: "400px", objectFit: "cover" }}
+             />
+             <Carousel.Caption>
+               <h3>{scheme.title}</h3>
+               <p>{scheme.description}</p>
+             </Carousel.Caption>
+           </Carousel.Item>
+         ))}
+       </Carousel>
+
+      {/* Rest of your original content */}
+>>>>>>> d02900ee249227b9c88aceb8c9fe967b46a31541
       <div className="container my-5">
+        {/* Search Section */}
         <h4 className="mb-3 text-center">Search Welfare Schemes</h4>
         <input
           type="text"
@@ -64,6 +93,7 @@ function HomePage() {
           placeholder="Search by scheme, benefit, or keyword..."
         />
 
+<<<<<<< HEAD
         {/* Categories with onClick Navigation */}
         <div className="my-5">
           <Row className="text-center">
@@ -76,6 +106,23 @@ function HomePage() {
                 >
                   <Card.Body>
                     <div className="icon" style={{ fontSize: "2rem" }}>{item.icon}</div>
+=======
+        {/* Categories Section */}
+        <div className="my-5">
+          <h4 className="text-center mb-4">Popular Categories</h4>
+          <Row className="text-center">
+            {[
+              { title: "Medical", icon: "🩺" },
+              { title: "Education", icon: "🎓" },
+              { title: "Home Allowance", icon: "🏠" },
+              { title: "Pension", icon: "💰" },
+              { title: "Scholarships", icon: "📚" },
+            ].map((item, index) => (
+              <Col md={4} key={index} className="mb-4">
+                <Card className="category-card h-100">
+                  <Card.Body>
+                    <div className="icon">{item.icon}</div>
+>>>>>>> d02900ee249227b9c88aceb8c9fe967b46a31541
                     <h5 className="card-title mt-2">{item.title}</h5>
                   </Card.Body>
                 </Card>

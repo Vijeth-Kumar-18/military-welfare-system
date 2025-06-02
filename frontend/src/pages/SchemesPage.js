@@ -1,25 +1,30 @@
 import React from "react";
-import { 
-  Tabs, 
-  Tab, 
-  Container, 
-  Row, 
-  Col, 
-  Card, 
+import {
+  Tabs,
+  Tab,
+  Container,
+  Row,
+  Col,
+  Card,
   Carousel,
   Badge
 } from "react-bootstrap";
 import "../styles/Schemes.css";
 
 const SchemeCard = ({ title, description, icon }) => (
-  <Card className="mb-4 border-0 shadow-hover" style={{ borderRadius: "15px", transition: "all 0.3s ease" }}>
+  <Card
+    className="mb-4 border-0 shadow-hover"
+    style={{ borderRadius: "15px", transition: "all 0.3s ease" }}
+  >
     <Card.Body className="p-4">
       <div className="d-flex">
         <div className="me-3" style={{ fontSize: "2rem", color: "#fc8019" }}>
           <i className={`fas fa-${icon}`}></i>
         </div>
         <div>
-          <Card.Title className="fw-bold" style={{ color: "#fc8019" }}>{title}</Card.Title>
+          <Card.Title className="fw-bold" style={{ color: "#fc8019" }}>
+            {title}
+          </Card.Title>
           <Card.Text className="text-muted">{description}</Card.Text>
           <Badge pill style={{ backgroundColor: "#fc8019" }} className="mt-2">
             Learn More <i className="fas fa-arrow-right ms-1"></i>
@@ -35,47 +40,44 @@ const SchemesPage = () => {
     {
       title: "ECHS Medical Scheme",
       description: "Comprehensive healthcare for veterans and families",
-      image: "https://ckshospitals.com/wp-content/uploads/2024/02/banner-11.05-1024x341-1-1.jpg"
+      image:
+        "https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
       title: "PM Scholarship Scheme",
       description: "Support for higher education of soldiers' children",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLuKIDhTlBJ2y3mfvGlXiHBw7lua7nN7loAw&s"
+      image:
+        "https://images.pexels.com/photos/267586/pexels-photo-267586.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
       title: "AWHO Housing",
       description: "Affordable housing solutions for defense personnel",
-      image: "https://awhosena.in/new/images/font-slides/omr1.jpg"
+      image:
+        "https://images.pexels.com/photos/1546166/pexels-photo-1546166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     }
   ];
 
   return (
-    <div className="schemes-page">
-      {/* Hero Carousel */}
-      <Carousel fade controls={false} indicators={false} className="mb-5">
-        {featuredSchemes.map((scheme, index) => (
-          <Carousel.Item key={index}>
-            <div 
-              className="d-flex align-items-center justify-content-center" 
-              style={{
-                height: "400px",
-                background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${scheme.image})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center"
-              }}
-            >
-              <div className="text-center text-white py-5">
-                <h1 className="display-4 fw-bold mb-3">{scheme.title}</h1>
-                <p className="lead mb-4">{scheme.description}</p>
-                <button className="btn btn-lg px-4 py-2" style={{ backgroundColor: "#fc8019", color: "white" }}>
-                  View Details <i className="fas fa-arrow-right ms-2"></i>
-                </button>
-              </div>
-            </div>
+    <div>
+      {/* Carousel Section */}
+      <Carousel interval={1500} pause={false}>
+        {featuredSchemes.map((scheme, idx) => (
+          <Carousel.Item key={idx}>
+            <img
+              className="d-block w-100"
+              src={scheme.image}
+              alt={scheme.title}
+              style={{ height: "400px", objectFit: "cover" }}
+            />
+            <Carousel.Caption>
+              <h3>{scheme.title}</h3>
+              <p>{scheme.description}</p>
+            </Carousel.Caption>
           </Carousel.Item>
         ))}
       </Carousel>
 
+      {/* Content Section */}
       <Container className="my-5">
         {/* Page Header */}
         <div className="text-center mb-5">
@@ -84,19 +86,20 @@ const SchemesPage = () => {
             Welfare Schemes for Indian Army
           </h1>
           <p className="lead text-muted">
-            Comprehensive support programs for serving and retired defense personnel and their families
+            Comprehensive support programs for serving and retired defense
+            personnel and their families
           </p>
         </div>
 
         {/* Schemes Tabs */}
-        <Tabs 
-          defaultActiveKey="medical" 
-          id="schemes-tabs" 
-          className="mb-4 custom-tabs" 
+        <Tabs
+          defaultActiveKey="medical"
+          id="schemes-tabs"
+          className="mb-4 custom-tabs"
           fill
         >
-          <Tab 
-            eventKey="medical" 
+          <Tab
+            eventKey="medical"
             title={
               <span className="fw-bold" style={{ color: "#000" }}>
                 <i className="fas fa-hospital me-2"></i> Medical
@@ -121,8 +124,8 @@ const SchemesPage = () => {
             </Row>
           </Tab>
 
-          <Tab 
-            eventKey="education" 
+          <Tab
+            eventKey="education"
             title={
               <span className="fw-bold" style={{ color: "#000" }}>
                 <i className="fas fa-graduation-cap me-2"></i> Education
@@ -147,8 +150,8 @@ const SchemesPage = () => {
             </Row>
           </Tab>
 
-          <Tab 
-            eventKey="home" 
+          <Tab
+            eventKey="home"
             title={
               <span className="fw-bold" style={{ color: "#000" }}>
                 <i className="fas fa-home me-2"></i> Housing
@@ -173,8 +176,8 @@ const SchemesPage = () => {
             </Row>
           </Tab>
 
-          <Tab 
-            eventKey="pension" 
+          <Tab
+            eventKey="pension"
             title={
               <span className="fw-bold" style={{ color: "#000" }}>
                 <i className="fas fa-rupee-sign me-2"></i> Pension
@@ -199,8 +202,8 @@ const SchemesPage = () => {
             </Row>
           </Tab>
 
-          <Tab 
-            eventKey="scholarships" 
+          <Tab
+            eventKey="scholarships"
             title={
               <span className="fw-bold" style={{ color: "#000" }}>
                 <i className="fas fa-award me-2"></i> Scholarships
@@ -236,33 +239,48 @@ const SchemesPage = () => {
             <Col md={4}>
               <Card className="border-0 shadow-sm text-center h-100">
                 <Card.Body>
-                  <div className="icon-circle mb-3 mx-auto text-white" style={{ backgroundColor: "#fc8019" }}>
+                  <div
+                    className="icon-circle mb-3 mx-auto text-white"
+                    style={{ backgroundColor: "#fc8019" }}
+                  >
                     <i className="fas fa-file-download fa-2x"></i>
                   </div>
                   <h5>Application Forms</h5>
-                  <p className="small text-muted">Download all scheme application forms</p>
+                  <p className="small text-muted">
+                    Download all scheme application forms
+                  </p>
                 </Card.Body>
               </Card>
             </Col>
             <Col md={4}>
               <Card className="border-0 shadow-sm text-center h-100">
                 <Card.Body>
-                  <div className="icon-circle mb-3 mx-auto text-white" style={{ backgroundColor: "#fc8019" }}>
+                  <div
+                    className="icon-circle mb-3 mx-auto text-white"
+                    style={{ backgroundColor: "#fc8019" }}
+                  >
                     <i className="fas fa-question-circle fa-2x"></i>
                   </div>
                   <h5>FAQs</h5>
-                  <p className="small text-muted">Find answers to common questions</p>
+                  <p className="small text-muted">
+                    Find answers to common questions
+                  </p>
                 </Card.Body>
               </Card>
             </Col>
             <Col md={4}>
               <Card className="border-0 shadow-sm text-center h-100">
                 <Card.Body>
-                  <div className="icon-circle mb-3 mx-auto text-white" style={{ backgroundColor: "#fc8019" }}>
+                  <div
+                    className="icon-circle mb-3 mx-auto text-white"
+                    style={{ backgroundColor: "#fc8019" }}
+                  >
                     <i className="fas fa-headset fa-2x"></i>
                   </div>
                   <h5>24/7 Helpline</h5>
-                  <p className="small text-muted">Call 1800-123-456 for assistance</p>
+                  <p className="small text-muted">
+                    Call 1800-123-456 for assistance
+                  </p>
                 </Card.Body>
               </Card>
             </Col>
