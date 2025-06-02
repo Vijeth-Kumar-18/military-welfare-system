@@ -11,6 +11,7 @@ import SignupPage from "./pages/SignupPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import SucessPage from "./pages/SucessPage";
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/sucess" element={<SucessPage />} />
+        <Route path="/privacy" element={<PrivacyPolicyPage />} />
 
       </Routes>
     </Router>

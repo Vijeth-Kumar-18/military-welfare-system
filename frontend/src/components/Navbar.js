@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import '../styles/Navbar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -7,15 +7,14 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Optional: Clear auth tokens or context here
     navigate('/login');
   };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4">
-      <Link className="navbar-brand" to="/">
+      <NavLink className="navbar-brand" to="/" style={{ color: '#fc8019', fontWeight: 'bold' }}>
         Military Welfare System
-      </Link>
+      </NavLink>
       <button
         className="navbar-toggler"
         type="button"
@@ -30,23 +29,22 @@ const Navbar = () => {
       <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <Link className="nav-link" to="/">Home</Link>
+            <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active-link" : "nav-link"}>Home</NavLink>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/schemes">Schemes</Link>
+            <NavLink to="/schemes" className={({ isActive }) => isActive ? "nav-link active-link" : "nav-link"}>Schemes</NavLink>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/emergency">Emergency</Link>
+            <NavLink to="/emergency" className={({ isActive }) => isActive ? "nav-link active-link" : "nav-link"}>Emergency</NavLink>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/grievance">Grievance</Link>
-          </li>
-         
-          <li className="nav-item">
-            <Link className="nav-link" to="/contact">Contact Us</Link>
+            <NavLink to="/grievance" className={({ isActive }) => isActive ? "nav-link active-link" : "nav-link"}>Grievance</NavLink>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/about">About Us</Link>  {/* ✅ Added here */}
+            <NavLink to="/contact" className={({ isActive }) => isActive ? "nav-link active-link" : "nav-link"}>Contact Us</NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="/about" className={({ isActive }) => isActive ? "nav-link active-link" : "nav-link"}>About Us</NavLink>
           </li>
         </ul>
         <button className="btn btn-outline-light" onClick={handleLogout}>Logout</button>

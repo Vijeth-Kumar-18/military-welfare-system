@@ -15,13 +15,13 @@ const SchemeCard = ({ title, description, icon }) => (
   <Card className="mb-4 border-0 shadow-hover" style={{ borderRadius: "15px", transition: "all 0.3s ease" }}>
     <Card.Body className="p-4">
       <div className="d-flex">
-        <div className="me-3" style={{ fontSize: "2rem", color: "#0d6efd" }}>
+        <div className="me-3" style={{ fontSize: "2rem", color: "#fc8019" }}>
           <i className={`fas fa-${icon}`}></i>
         </div>
         <div>
-          <Card.Title className="fw-bold text-primary">{title}</Card.Title>
+          <Card.Title className="fw-bold" style={{ color: "#fc8019" }}>{title}</Card.Title>
           <Card.Text className="text-muted">{description}</Card.Text>
-          <Badge pill bg="primary" className="mt-2">
+          <Badge pill style={{ backgroundColor: "#fc8019" }} className="mt-2">
             Learn More <i className="fas fa-arrow-right ms-1"></i>
           </Badge>
         </div>
@@ -67,7 +67,7 @@ const SchemesPage = () => {
               <div className="text-center text-white py-5">
                 <h1 className="display-4 fw-bold mb-3">{scheme.title}</h1>
                 <p className="lead mb-4">{scheme.description}</p>
-                <button className="btn btn-primary btn-lg px-4 py-2">
+                <button className="btn btn-lg px-4 py-2" style={{ backgroundColor: "#fc8019", color: "white" }}>
                   View Details <i className="fas fa-arrow-right ms-2"></i>
                 </button>
               </div>
@@ -79,7 +79,7 @@ const SchemesPage = () => {
       <Container className="my-5">
         {/* Page Header */}
         <div className="text-center mb-5">
-          <h1 className="display-5 fw-bold text-primary mb-3">
+          <h1 className="display-5 fw-bold mb-3" style={{ color: "black" }}>
             <i className="fas fa-hand-holding-heart me-2"></i>
             Welfare Schemes for Indian Army
           </h1>
@@ -98,7 +98,7 @@ const SchemesPage = () => {
           <Tab 
             eventKey="medical" 
             title={
-              <span>
+              <span className="fw-bold" style={{ color: "#000" }}>
                 <i className="fas fa-hospital me-2"></i> Medical
               </span>
             }
@@ -124,7 +124,7 @@ const SchemesPage = () => {
           <Tab 
             eventKey="education" 
             title={
-              <span>
+              <span className="fw-bold" style={{ color: "#000" }}>
                 <i className="fas fa-graduation-cap me-2"></i> Education
               </span>
             }
@@ -150,7 +150,7 @@ const SchemesPage = () => {
           <Tab 
             eventKey="home" 
             title={
-              <span>
+              <span className="fw-bold" style={{ color: "#000" }}>
                 <i className="fas fa-home me-2"></i> Housing
               </span>
             }
@@ -176,7 +176,7 @@ const SchemesPage = () => {
           <Tab 
             eventKey="pension" 
             title={
-              <span>
+              <span className="fw-bold" style={{ color: "#000" }}>
                 <i className="fas fa-rupee-sign me-2"></i> Pension
               </span>
             }
@@ -202,7 +202,7 @@ const SchemesPage = () => {
           <Tab 
             eventKey="scholarships" 
             title={
-              <span>
+              <span className="fw-bold" style={{ color: "#000" }}>
                 <i className="fas fa-award me-2"></i> Scholarships
               </span>
             }
@@ -228,15 +228,15 @@ const SchemesPage = () => {
 
         {/* Quick Links Section */}
         <div className="mt-5 pt-4 border-top">
-          <h3 className="fw-bold mb-4 text-center">
-            <i className="fas fa-link me-2 text-primary"></i>
+          <h3 className="fw-bold mb-4 text-center" style={{ color: "#fc8019" }}>
+            <i className="fas fa-link me-2"></i>
             Quick Access Links
           </h3>
           <Row className="g-4">
             <Col md={4}>
               <Card className="border-0 shadow-sm text-center h-100">
                 <Card.Body>
-                  <div className="icon-circle mb-3 mx-auto bg-primary text-white">
+                  <div className="icon-circle mb-3 mx-auto text-white" style={{ backgroundColor: "#fc8019" }}>
                     <i className="fas fa-file-download fa-2x"></i>
                   </div>
                   <h5>Application Forms</h5>
@@ -247,7 +247,7 @@ const SchemesPage = () => {
             <Col md={4}>
               <Card className="border-0 shadow-sm text-center h-100">
                 <Card.Body>
-                  <div className="icon-circle mb-3 mx-auto bg-primary text-white">
+                  <div className="icon-circle mb-3 mx-auto text-white" style={{ backgroundColor: "#fc8019" }}>
                     <i className="fas fa-question-circle fa-2x"></i>
                   </div>
                   <h5>FAQs</h5>
@@ -258,7 +258,7 @@ const SchemesPage = () => {
             <Col md={4}>
               <Card className="border-0 shadow-sm text-center h-100">
                 <Card.Body>
-                  <div className="icon-circle mb-3 mx-auto bg-primary text-white">
+                  <div className="icon-circle mb-3 mx-auto text-white" style={{ backgroundColor: "#fc8019" }}>
                     <i className="fas fa-headset fa-2x"></i>
                   </div>
                   <h5>24/7 Helpline</h5>
