@@ -6,7 +6,7 @@ import HomePage from "./pages/HomePage";
 import SchemesPage from "./pages/SchemesPage";
 import EmergencyPage from "./pages/EmergencyPage";
 import GrievancePage from "./pages/GrievancePage";
-import HelpSupportPage from "./pages/HelpSupportPage";
+
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import AboutPage from "./pages/AboutPage";
@@ -22,7 +22,7 @@ function App() {
         <Route path="/schemes" element={<SchemesPage />} />
         <Route path="/emergency" element={<EmergencyPage />} />
         <Route path="/grievance" element={<GrievancePage />} />
-        <Route path="/help-support" element={<HelpSupportPage />} />
+       
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/about" element={<AboutPage />} />
