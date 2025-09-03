@@ -67,18 +67,18 @@ const ContactPage = () => {
                 <div className="mt-4 pt-3 border-top border-secondary">
                   <h4 className="h6 text-uppercase fw-bold text-muted mb-3">Find Us On</h4>
                   <div className="d-flex gap-3">
-                    <a href="#" className="btn btn-sm rounded-circle p-2" style={{ backgroundColor: "#3b5998", color: "white" }}>
-                      <i className="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" className="btn btn-sm rounded-circle p-2" style={{ backgroundColor: "#1DA1F2", color: "white" }}>
-                      <i className="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" className="btn btn-sm rounded-circle p-2" style={{ backgroundColor: "#E1306C", color: "white" }}>
-                      <i className="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" className="btn btn-sm rounded-circle p-2" style={{ backgroundColor: "#0077B5", color: "white" }}>
-                      <i className="fab fa-linkedin-in"></i>
-                    </a>
+                      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="btn btn-sm rounded-circle p-2" style={{ backgroundColor: "#3b5998", color: "white" }}>
+                        <i className="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="btn btn-sm rounded-circle p-2" style={{ backgroundColor: "#1DA1F2", color: "white" }}>
+                        <i className="fab fa-twitter"></i>
+                      </a>
+                      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="btn btn-sm rounded-circle p-2" style={{ backgroundColor: "#E1306C", color: "white" }}>
+                        <i className="fab fa-instagram"></i>
+                      </a>
+                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="btn btn-sm rounded-circle p-2" style={{ backgroundColor: "#0077B5", color: "white" }}>
+                        <i className="fab fa-linkedin-in"></i>
+                      </a>
                   </div>
                 </div>
               </div>
@@ -143,7 +143,7 @@ const ContactPage = () => {
                   </div>
 
                   <div className="d-grid">
-                    <button type="submit" className="btn btn-lg fw-bold" disabled={!agreeToTerms}
+                    <button type="submit" className="btn btn-lg fw-bold btn-warning" disabled={!agreeToTerms}
                       style={{
                         backgroundColor: agreeToTerms ? "#fc8019" : "#cccccc",
                         color: "white",
@@ -152,9 +152,7 @@ const ContactPage = () => {
                         padding: "12px",
                         cursor: agreeToTerms ? "pointer" : "not-allowed"
                       }}
-                       type="submit"
-  className="btn btn-warning"
-  onClick={() => window.location.href = '/send-message'}>
+                      onClick={() => window.location.href = '/send-message'}>
                       SEND MESSAGE <i className="fas fa-arrow-right ms-2"></i>
                     </button>
                   </div>

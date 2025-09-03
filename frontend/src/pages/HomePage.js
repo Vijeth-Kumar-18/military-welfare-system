@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Carousel, Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Carousel, Row, Col, Card, Button } from "react-bootstrap";
 import "../styles/Home.css";
 
 function HomePage() {
