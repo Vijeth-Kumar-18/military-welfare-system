@@ -43,7 +43,7 @@ const LoginPage = () => {
             </button>
           </div>
           <div className="text-center">
-            <a href="#" className="text-decoration-none">Forgot password?</a>
+            <button type="button" className="text-decoration-none btn btn-link p-0" style={{ background: "none", border: "none" }} onClick={() => alert('Forgot password functionality coming soon!')}>Forgot password?</button>
           </div>
         </form>
       </div>
